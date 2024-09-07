@@ -1,0 +1,48 @@
+{
+  "name": "james-gilmore-hotels",
+  "version": "0.1.0",
+  "bin": {
+    "james-gilmore-hotels": "bin/james-gilmore-hotels.js"
+  },
+  "scripts": {
+    "synth": "cdk synth --all",
+    "deploy": "cdk deploy --all",
+    "remove": "cdk destroy --all",
+    "test:int": "STAGE=develop jest --config ./jest.int.config.js --runInBand",
+    "test:int:watch": "STAGE=develop jest --config ./jest.int.config.js --watch --runInBand"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.14.9",
+    "@types/uuid": "^10.0.0",
+    "aws-cdk": "2.150.0",
+    "esbuild": "^0.23.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.5.3"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.7.0",
+    "@aws-lambda-powertools/metrics": "^2.7.0",
+    "@aws-lambda-powertools/parameters": "^2.8.0",
+    "@aws-lambda-powertools/tracer": "^2.7.0",
+    "@aws-sdk/client-dynamodb": "^3.651.1",
+    "@aws-sdk/client-sns": "^3.637.0",
+    "@aws-sdk/client-ssm": "^3.653.0",
+    "@aws-sdk/util-dynamodb": "^3.651.1",
+    "@fastify/aws-lambda": "^5.0.0",
+    "@middy/core": "^5.4.6",
+    "@middy/sqs-partial-batch-failure": "^5.4.6",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "aws-cdk-lib": "2.150.0",
+    "axios": "^1.7.7",
+    "constructs": "^10.0.0",
+    "convict": "^6.2.4",
+    "fastify": "^5.0.0",
+    "source-map-support": "^0.5.21",
+    "uuid": "^10.0.0"
+  }
+}

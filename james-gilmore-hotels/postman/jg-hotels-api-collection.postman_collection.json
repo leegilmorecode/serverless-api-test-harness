@@ -1,0 +1,38 @@
+{
+  "info": {
+    "_postman_id": "f1d39bcc-f57c-4e08-94e0-b3bf2ffbb517",
+    "name": "jg-hotels-api-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "create booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerId\": \"60cef317-1cdc-4ac2-aad8-1e2d7cb6f94c\",\n  \"roomType\": \"Deluxe\",\n  \"checkIn\": \"2024-09-01\",\n  \"checkOut\": \"2024-09-05\",\n  \"treatment\": \"Massage\",\n  \"spaDate\": \"2024-09-02\",\n  \"course\": \"Ocean View\",\n  \"golfDate\": \"2024-09-03\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/bookings/",
+          "host": ["{{url}}"],
+          "path": ["bookings", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod"
+    }
+  ]
+}

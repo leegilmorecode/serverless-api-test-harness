@@ -1,0 +1,82 @@
+{
+  "info": {
+    "_postman_id": "839bba8f-3850-40a2-8128-a6e70a3fd24b",
+    "name": "hotel-internal-apis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Create hotel booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"roomType\": \"Deluxe\",\n  \"checkIn\": \"2024-09-15\",\n  \"bookingDate\": \"2024-09-16\",\n  \"checkOut\": \"2024-09-20\",\n  \"customerId\": \"ba284d78-b19f-40a6-ae80-72841cd131f8\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/prod/hotel-bookings/",
+          "host": ["{{url}}"],
+          "path": ["prod", "hotel-bookings", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create spa booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"treatment\": \"Full Body Massage\",\n  \"bookingDate\": \"2024-09-16\",\n  \"customerId\": \"ba284d78-b19f-40a6-ae80-72841cd131f8\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/prod/spa-bookings/",
+          "host": ["{{url}}"],
+          "path": ["prod", "spa-bookings", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create golf booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"course\": \"Ocean View Course\",\n  \"bookingDate\": \"2024-09-16\",\n  \"customerId\": \"ba284d78-b19f-40a6-ae80-72841cd131f8\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/prod/golf-bookings/",
+          "host": ["{{url}}"],
+          "path": ["prod", "golf-bookings", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://your-rest-id.execute-api.your-region.amazonaws.com"
+    }
+  ]
+}
